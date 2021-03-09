@@ -1,18 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beer Game &#x1F37A;</title>
 </head>
+
 <body>
-    <h1>&#x1F37A;Beer Game&#x1F37A;</h1>
-    
-    <p align="left"><font face="Arial" size="2"><a class=nav href="instructorpage.htm">Click
-        here</a> if you are an <b>instructor</b></font></p>
-        
-    <p align="left"><font face="Arial" size="2"><a class=nav href="viewallgames.asp">Click
-        here</a> if you want <b>to play the game</b></font></p>
+
+    <video autoplay muted loop poster=media/imgs/poster.jpg id="myVideo">
+        <source src="media/videos/bottle_factory.mp4" type="video/mp4">
+    </video>
+
+    <div class="topnav">
+        <a class="active" href="index.html">
+            <h1>&#x1F37A;THE BEER GAME&#x1F37A;</h1>
+        </a>
+        <ul class="top-level-menu">
+            <li><a href="html/about.html">about &#x1F914;</a></li>
+            <li><a href="#login">Login &#x1F974;</a>
+                <ul class="second-level-menu">
+                    <li><a href="html/login_instructor.html">Instructor</a></li>
+                    <li><a href="html/login_student.html">Student</a></li>
+                </ul>
+            </li>
+            <li><a href="#register.html">Register &#x1F3ED;</a>
+                <ul class="second-level-menu">
+                    <li><a href="html/register_instructor.html">Instructor</a></li>
+                    <li><a href="html/register_student.html">Student</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>ARE YOU READY TO PLAY!!!</h1>
+        <p>Welcome to Group7 Beer Game!!! We are going to give you a great experience</p>
+        <!-- Use a button to pause/play the video with JavaScript -->
+        <button id="myBtn" onclick="myFunction()">Pause</button>
+    </div>
+
+
+
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
+
 </body>
+
 </html>
