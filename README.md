@@ -6,3 +6,4 @@ Repo for sprint 1 software engineering
     -Registration Form Created
     -Login Form Created
     -about Page
+    -404 Page
